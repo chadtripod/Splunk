@@ -1,5 +1,5 @@
-description: >
-  Configure the AWS Provider for Spinnaker and connect to an EKS cluster.
+
+  Configure the Armory Splunk App for Spinnaker
 ---
 
 
