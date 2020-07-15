@@ -34,6 +34,20 @@ You will see that Splunk has "Successfully" created the new data input, and the 
 4. Insert this JSON block replacing the endpoint hostname with the IP or Hostname of your configured HTTP Event Collector.  Also, replace the TOKEN section with the token generated from the Splunk HTTP Event Collector configuration in Step 2.  Save file.
 5. Run a "hal deploy apply" within the Halyard container to apply the new Echo configuration.  Once the Spinnaker services that need the configuration change restart you'll see Spinnaker data starting to flow to the HTTP Event Collector and indexed in the "armory" index.  Validate by running a search "index=armory" in the Splunk search bar.
 
+## Halyard Configuration.  Place this yaml into the ~/.hal/default/profile/echo-local.yml
+
+```bash
+rest:
+  enabled: true
+  endpoints:
+    - wrap: true
+      url: "https://172.31.9.24:8088/services/collector/event?"
+      headers:
+        Authorization: "Splunk db0e056c-dd38-4968-beb5-fd1410b29d2f"
+      template: '{"event":{{event}} }'
+      insecure: true
+  ```
+
 ## Configure Spinnaker to forward data to Splunk HTTP Event Collector - Spinnaker Operator Configuration
   ```bash
   kubectl get ns
