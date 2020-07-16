@@ -81,5 +81,5 @@ rest:
 
 ![No CREATE Permission](validate-splunk-search.png)
 
-## Armory Splunk App for Spinnaker
+## Armory Splunk App for Spinnaker - Video Walkthrough
 {{< youtube y8Dm6k7c94Q >}}
