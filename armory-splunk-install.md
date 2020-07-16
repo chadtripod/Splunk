@@ -35,7 +35,8 @@ You will see that Splunk has "Successfully" created the new data input, and the 
 5. Run a "hal deploy apply" within the Halyard container to apply the new Echo configuration.  Once the Spinnaker services that need the configuration change restart you'll see Spinnaker data starting to flow to the HTTP Event Collector and indexed in the "armory" index.  Validate by running a search "index=armory" in the Splunk search bar.
 
 ## Operator Configuration. Insert this yaml into your SpinnakerService.yml file or used as a Patch file if using kustomize to build SpinnakerService.yml
-  ```bash
+ ---
+ ```bash
   apiVersion: spinnaker.armory.io/v1alpha2
 kind: SpinnakerService
 metadata:
@@ -46,15 +47,15 @@ spec:
       echo:
         rest:
           enabled: true
-    endpoints:
-      - wrap: true
-        url: "https://[HTTP-Event-Collector-Endpoint]:8088/services/collector/event?"
-        headers:
-          Authorization: "Splunk [Your-HTTP-Event-Collector-Token]"
-        template: '{"event":{{event}} }'
-        insecure: true
+          endpoints:
+            - wrap: true
+            url: "https://[HTTP-Event-Collector-Endpoint]:8088/services/collector/event?"
+          headers:
+            Authorization: "Splunk [Your-HTTP-Event-Collector-Token]"
+          template: '{"event":{{event}} }'
+          insecure: true
   ```
-
+---
 ## Halyard Configuration.  Place this yaml into the ~/.hal/default/profile/echo-local.yml
 
 ```bash
