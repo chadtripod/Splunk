@@ -37,7 +37,7 @@ You will see that Splunk has "Successfully" created the new data input, and the 
 ## Operator Configuration. Insert this yaml into your SpinnakerService.yml file or used as a Patch file if using kustomize to build SpinnakerService.yml
  ---
  ```bash
-  apiVersion: spinnaker.armory.io/v1alpha2
+apiVersion: spinnaker.armory.io/v1alpha2
 kind: SpinnakerService
 metadata:
   name: spinnaker
