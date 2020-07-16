@@ -5,8 +5,6 @@
 
 If you would like more information about the data exposed by this application you can see the [video walkthrough](#aws-quickstart-step-2-video) at the bottom of this page.
 
-{{% alert title="Note" %}}This guide assumes that Spinnaker is installed with Halyard, not Operator.{{% /alert %}}
-
 ## Install the Armory Splunk App for Spinnaker
 
 1. Go to the Splunk App store "Splunkbase" and download the "Armory Splunk App for Spinnaker".  https://splunkbase.splunk.com/
