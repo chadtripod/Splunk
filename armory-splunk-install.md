@@ -11,8 +11,10 @@ If you would like more information about the data exposed by this application yo
 
 1. Go to the Splunk App store "Splunkbase" and download the "Armory Splunk App for Spinnaker".  https://splunkbase.splunk.com/
 2. Search for "Armory" or "Spinnaker"
-3. Install the "Armory Splunk App for Spinnaker" on the Search Head, or as an app directory on the master for Search Head Clustering.
+3. Install the "Armory Splunk App for Spinnaker" on the Search Head, Indexer, or in the "/etc/master-apps/" directory on the master for Search Head Clustering.
 4. The TA can be installed on the Indexers, Heavy Forwarders, or all in one Splunk.  It's the data input, so install based on your Splunk architecture.
+
+
 
 ## Configure Splunk HTTP Event Collector Endpoint to recieve data from Spinnaker
 
