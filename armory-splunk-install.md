@@ -75,14 +75,9 @@ rest:
       insecure: true
   ```
 
+## Validate in Splunk by searching index for Spinnaker Events
 
-## First: Configure the AWS Provider for Spinnaker
+![No CREATE Permission](validate-splunk-search.png)
 
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
-
-
-## Congratulations!  
-You have configured the Spinnaker AWS Provider and Kubernetes Account for EKS.  You can now deploy to EC2, ECS, Fargate, and EKS.  Lets build some pipelines in [AWS QuickStart Step 3]({{< ref "Armory-Spinnaker-Quickstart-3" >}}).
-
-## AWS QuickStart Step 2 Video
+## Armory Splunk App for Spinnaker
 {{< youtube y8Dm6k7c94Q >}}
