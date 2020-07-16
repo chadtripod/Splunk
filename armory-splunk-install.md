@@ -19,15 +19,15 @@ If you would like more information about the data exposed by this application yo
 To start we'll configured Splunk to recieve authenticated data flow from Spinnaker.  This is no different than any other HTTP Event Collector configuration which can be found here.  
 
 1. Configure Splunk to have a new Data Input.  In the top right of the Splunk UI click #Settings > Data Inputs
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
+![No CREATE Permission](/images/data-inputs.png)
 2. Located the "HTTP Event Collector" and click the "+ Add New"
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
+![No CREATE Permission](/images/http-event-collector.png)
 3. Under the "Name" Field give the input a name such as "Spinnaker".  Click the "Next" button at the top.
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
+![No CREATE Permission](/images/select-source.png)
 4. Leave the "Source type" as "Automatic given the data source is JSON and parsed by default.  For the "App context" select "Armory (TA-armory)".  Lastly, select "armory" as the index for storing the data in Splunk.  Click the "Review" button at the top.
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
+![No CREATE Permission](/images/input-settings.png)
 5. Finally to configure the HTTP Event Collector Data Input for Spinnaker click the "Submit" button.
-![No CREATE Permission](/images/AWS-Deploy-Spinnaker.png)
+![No CREATE Permission](/images/token.png)
 
 You will see that Splunk has "Successfully" created the new data input, and the authentication token for the HTTP event collector is generated.  You can keep this and store it for the Spinnaker configuration.  If you didn't happen to save the token don't worry.  You can always view the HTTP Event Collector Data Inputs and find the authentication token there.
 
