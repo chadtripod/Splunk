@@ -75,6 +75,8 @@ rest:
       insecure: true
   ```
 
+For Halyard install, once you have created the echo-local.yml file with the above contents runs "hal deploy apply" to apply changes.
+
 ## Validate in Splunk by searching index for Spinnaker Events
 
 ![No CREATE Permission](validate-splunk-search.png)
