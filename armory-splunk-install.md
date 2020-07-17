@@ -81,5 +81,18 @@ For Halyard install, once you have created the echo-local.yml file with the abov
 
 ![No CREATE Permission](validate-splunk-search.png)
 
+## Configure Automated Rollback with Splunk and Spinnaker
+
+The Armory Splunk App for Spinnaker includes a Splunk webhook for data driven automated rollback.  You can configure this webhook to the Spinnaker API.
+
+1. In Splunk while in the Spinnaker App, Click on "Settings > Searches Reports & Alerts" and locate the "Rollback" Alert.
+![No CREATE Permission](validate-splunk-search.png)
+2. Under "Action" click "Edit" then "Edit Alert"
+![No CREATE Permission](validate-splunk-search.png)
+3. Scroll down to "Trigger Actions" and replace the "[YOUR-GATE-HOSTNAME]" with the FQDN or IP of your Spinnaker Gate service.
+![No CREATE Permission](validate-splunk-search.png)
+4. Next on the same URL replace the "[YOUR-SPINNAKER-APP]" with the Spinnaker Application you'd like to Rollback based on Errors, Exceptions, or KPI's from Splunk.
+![No CREATE Permission](validate-splunk-search.png)
+
 ## Armory Splunk App for Spinnaker - Video Walkthrough
 {{< youtube y8Dm6k7c94Q >}}
